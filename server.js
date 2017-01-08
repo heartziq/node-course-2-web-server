@@ -51,6 +51,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/project', (req, res) => {
+  res.render('project.hbs', {
+    pageTitle: 'Projects',
+    welcomeMsg: 'Welcome to my projects'
+  })
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to process'
